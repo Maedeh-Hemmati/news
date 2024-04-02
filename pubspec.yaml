@@ -38,6 +38,8 @@ dependencies:
   #Network
   retrofit: ^4.1.0
   dio: ^5.4.2
+  http: ^0.13.3
+  internet_connection_checker: ^1.0.0+1
 
   #State Management
   flutter_bloc: ^8.1.5
@@ -51,6 +53,7 @@ dependencies:
   oktoast: ^3.4.0
   floor: ^1.4.2
   dartz: ^0.10.1
+  retrofit_generator: ^8.1.0
 
 
 dev_dependencies:

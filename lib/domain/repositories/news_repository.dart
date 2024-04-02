@@ -5,5 +5,5 @@ import '../../utils/resources/error/failures.dart';
 import '../entities/responses/breaking_news.dart';
 
 abstract class NewsRepository {
-  Future<Either<Failure, List<BreakingNews>>> getBreakingNewsArticles(BreakingNewsRequest breakingNewsRequest);
+  Future<Either<Failure, BreakingNews>> getBreakingNewsArticles(BreakingNewsRequest breakingNewsRequest);
 }
