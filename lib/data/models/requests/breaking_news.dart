@@ -1,5 +1,5 @@
-import '../../../utils/constants/nums.dart';
-import '../../../utils/constants/strings.dart';
+import '../../../core/constants/nums.dart';
+import '../../../core/constants/strings.dart';
 
 class BreakingNewsRequest {
   final String apiKey;

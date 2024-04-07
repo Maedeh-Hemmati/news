@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'article.dart';
+import 'article_entity.dart';
 
 class BreakingNews extends Equatable {
   final String status;

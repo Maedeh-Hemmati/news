@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../../../domain/entities/responses/breaking_news.dart';
+import '../../../domain/entities/responses/breaking_news_entity.dart';
 import 'article_model.dart';
 
 class BreakingNewsModel extends BreakingNews {

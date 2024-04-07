@@ -1,23 +1,14 @@
-import 'package:auto_route/auto_route.dart';
+import 'package:go_router/go_router.dart';
 
-import 'app_router.gr.dart';
+import '../../presentation/views/breaking_news_view.dart';
 
-@AutoRouterConfig(replaceInRouteName: 'Screen,Route')
-class AppRouter extends $AppRouter {
-  @override
-  RouteType get defaultRouteType => const RouteType.material();
-
-  @override
-  List<AutoRoute> get routes => [
-    MaterialRoute(page: const PageInfo('MyApp'), initial: true),
-    MaterialRoute(
-      page: const PageInfo('SecondPage'),
-      fullscreenDialog: true,
+final router = GoRouter(
+  initialLocation: '/',
+  routes: [
+    GoRoute(
+      name: 'home',
+      path: '/',
+      builder: (context, state) => const BreakingNewsView(),
     ),
-    CustomRoute(
-        page: const PageInfo('ThirdPage'),
-        transitionsBuilder: TransitionsBuilders.slideLeftWithFade),
-
-    /// routes go here
-  ];
-}
+  ],
+);

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/models/requests/breaking_news.dart';
-import '../../domain/entities/responses/article.dart';
+import '../../domain/entities/responses/article_entity.dart';
 import '../../domain/usecases/get_breaking_news_articles_usecase.dart';
-import '../../utils/constants/nums.dart';
-import '../../utils/resources/error/failures.dart';
+import '../../core/constants/nums.dart';
+import '../../core/error/failures.dart';
 
 part 'remote_articles_state.dart';
 

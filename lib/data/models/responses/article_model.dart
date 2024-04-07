@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../../../domain/entities/responses/article.dart';
+import '../../../domain/entities/responses/article_entity.dart';
 import 'source_model.dart';
 
 class ArticleModel extends Article {
@@ -30,7 +30,7 @@ class ArticleModel extends Article {
     return ArticleModel(
       id: json["id"],
       author: json["author"],
-      source: json["source"],
+      source: json["source"].map((x) => SourceModel.fromJson(x)),
       title: json["title"],
       description: json["description"],
       url: json["url"],
