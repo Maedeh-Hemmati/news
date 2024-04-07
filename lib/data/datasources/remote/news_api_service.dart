@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-import '../../../utils/constants/strings.dart';
+import '../../../core/constants/strings.dart';
 import '../../models/responses/breaking_news_model.dart';
 part 'news_api_service.g.dart';
 @RestApi(baseUrl: baseUrl, parser: Parser.JsonSerializable)
