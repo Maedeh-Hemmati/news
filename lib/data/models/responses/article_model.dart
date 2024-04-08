@@ -30,7 +30,7 @@ class ArticleModel extends Article {
     return ArticleModel(
       id: json["id"],
       author: json["author"],
-      source: json["source"].map((x) => SourceModel.fromJson(x)),
+      source: SourceModel.fromJson(json["source"]),
       title: json["title"],
       description: json["description"],
       url: json["url"],

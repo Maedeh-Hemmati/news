@@ -24,7 +24,9 @@ class RemoteArticleCubit extends Cubit<RemoteArticlesState> {
     emit(const RemoteArticlesLoading());
     try {
       final result = await _getBreakingNewsArticlesUseCase.call(BreakingNewsRequest(page: _page));
-      result.fold((failure) => emit(RemoteArticlesFailed(error: failure)), (news) {
+      result.fold(
+              (failure) => emit(RemoteArticlesFailed(error: failure)),
+              (news) {
         final noMoreData = news.articles.length < defaultPageSize;
         _page++;
         emit(RemoteArticlesSuccess(articles: news.articles, noMoreData: noMoreData));

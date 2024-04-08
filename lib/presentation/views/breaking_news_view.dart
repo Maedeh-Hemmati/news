@@ -9,6 +9,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import '../../domain/entities/responses/article_entity.dart';
 import '../../core/extensions/scroll_controller.dart';
 import '../cubits/remote_articles_cubit.dart';
+import '../widgets/article_widget.dart';
 
 @RoutePage()
 class BreakingNewsView extends HookWidget {
@@ -57,9 +58,9 @@ class BreakingNewsView extends HookWidget {
     return CustomScrollView(
       controller: scrollController,
       slivers: [
-        // SliverList(
-        //   delegate: SliverChildBuilderDelegate((context, index) => ArticleWidget(article: articles[index]), childCount: articles.length),
-        // ),
+        SliverList(
+          delegate: SliverChildBuilderDelegate((context, index) => ArticleWidget(article: articles[index]), childCount: articles.length),
+        ),
         if (!noMoreData)
           const SliverToBoxAdapter(
             child: Padding(
